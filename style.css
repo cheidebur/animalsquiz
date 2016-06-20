@@ -1,0 +1,116 @@
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 6000px 0; }
+}
+
+body {
+	background-color: gray;
+}
+
+header {
+	text-align: center;
+	font-size: 2rem;
+	font-family: 'Arimo', sans-serif;
+}
+.gameContainer {
+	margin: 0 auto;
+	width:55rem;
+	height:40rem;
+	background-color: lavender;
+	box-shadow: 0px 0px 30px;
+	border-radius: 1rem;
+	background-image: url('http://i.imgur.com/khebpTG.png');
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	background-size: contain;
+	animation: animatedBackground 120s linear infinite;
+	transform: translateZ(0);
+
+}
+
+#qNumbaBox {
+	text-align: center;
+	font-family: 'Sacramento';
+	font-size: 2rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 2rem;
+	background-color: white;
+
+
+}
+
+#qRemainingBox {
+	font-family: 'Sacramento';
+	font-size: 2rem;
+	text-align: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 2rem;
+	background-color: white;
+	float:right;
+}
+
+
+
+
+#qSection {
+	background-color: rgba(255, 255, 255, 0.9);
+	margin: 0 auto;
+	width: 40rem;
+	height: 8.5rem;
+	text-align: center;
+	font-size: 3rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-shadow: 0px 0px 20px grey;
+	border-radius: 0.5rem;
+	visibility:hidden;
+	
+
+
+}
+
+#optionsContainer {
+	margin: 0 auto;
+	width: 30%;
+	position: relative;
+	top: 6rem;
+}
+
+#next {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1rem;
+	padding: 1rem;
+	visibility:hidden;
+	width: 10%;
+	border: solid 0.2rem;
+	border-radius: 5rem;
+	position:relative;
+	top:1rem;
+
+}
+
+#option1, #option2,
+#option3, #option4 {
+	text-align: center;
+	font-size: 2.5rem;
+	font-family: 'Sacramento';
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 0.5rem;
+	margin: 0.2rem;
+}
+
+
+
+#option1:hover, #option2:hover,
+#option3:hover, #option4:hover,
+#next:hover {
+	text-align: center;
+	background-color: #CECECE;
+	color: white;
+	transition: background-color 0.5s ease;
+	border-radius: 0.5rem;
+	cursor: pointer;
+
+}
