@@ -4,20 +4,29 @@
 }
 
 body {
-	background-color: gray;
+	background-color: #4e4936;
+	background-image:url('http://i.imgur.com/3frGrrQ.jpg');
+	background-repeat: repeat-x;
+
 }
 
 header {
 	text-align: center;
-	font-size: 2rem;
-	font-family: 'Arimo', sans-serif;
+	color: white;
+	font-size: 6rem;
+	font-family: 'Sacramento', sans-serif;
+	top: -1rem;
+	margin-bottom: -4rem;
+	position:relative;
+	z-index: 100;
+	text-shadow: 0px 0px 50px gray;
 }
 .gameContainer {
 	margin: 0 auto;
 	width:55rem;
 	height:40rem;
 	background-color: lavender;
-	box-shadow: 0px 0px 30px;
+	box-shadow: 0px 0px 30px gray;
 	border-radius: 1rem;
 	background-image: url('http://i.imgur.com/khebpTG.png');
 	background-position: 0px 0px;
