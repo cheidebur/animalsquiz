@@ -1,82 +1,116 @@
 var totalQuestions = 7
 
-var question1 = {
-	num: 1,
-	ask: "Which animal can breathe through its butt?",
-	options: ["Shark", "Koala", "Turtle", "Octopus"],
-	correct: 2,
-	image: "Image"
-}
+var questions = [
 
-var question2 = {
-	num: 2,
-	ask: "Which animal can travel faster than a horse?",
-	options: ["Dolphin", "Coyote", "Elephant", "Ostrich"],
-	correct: 4,
-	image: "Image"
-}
+		{	
+			num: 1,
+			ask: "Which animal can breathe through its butt?",
+			options: ["Shark", "Koala", "Turtle", "Octopus"],
+			correct: 2,
+			image: "Image"
+		},
 
-var question3 = {
-	num: 3,
-	ask: "Is this question number three?",
-	options: ["Why", "yes", "it", "is"],
-	correct: 2,
-	image: "Image"
-}
+		{
+			num: 2,
+			ask: "Which animal can travel faster than a horse?",
+			options: ["Dolphin", "Coyote", "Elephant", "Ostrich"],
+			correct: 4,
+			image: "Image"
+		},
 
-var question4 = {
-	num: 3,
-	ask: "Is this question number four?",
-	options: ["Why", "yes", "it", "is"],
-	correct: 2,
-	image: "Image"
-}
+		{
+			num: 3,
+			ask: "Is this question number three?",
+			options: ["Why", "yes", "it", "is"],
+			correct: 2,
+			image: "Image"
+		},
 
-var question5 = {
-	num: 3,
-	ask: "Is this question number five?",
-	options: ["Why", "yes", "it", "is"],
-	correct: 2,
-	image: "Image"
-}
+		{
+			num: 4,
+			ask: "Is this question number four?",
+			options: ["Why", "yes", "it", "is"],
+			correct: 2,
+			image: "Image"
+		},
 
-var question6 = {
-	num: 3,
-	ask: "Is this question number six?",
-	options: ["Why", "yes", "it", "is"],
-	correct: 2,
-	image: "Image"
-}
+		{
+			num: 5,
+			ask: "Is this question number five?",
+			options: ["Why", "yes", "it", "is"],
+			correct: 2,
+			image: "Image"
+		},
 
-var question7 = {
-	num: 3,
-	ask: "Is this question number seven?",
-	options: ["Why", "yes", "it", "is"],
-	correct: 2,
-	image: "Image"
-}
+		{
+			num: 6,
+			ask: "Is this question number six?",
+			options: ["Why", "yes", "it", "is"],
+			correct: 2,
+			image: "Image"
+		},
 
-var questionArray = [question1, question2, question3, 
-	question4, question5, question6, question7];
+		{
+			num: 7,
+			ask: "Is this question number seven?",
+			options: ["Why", "yes", "it", "is"],
+			correct: 2,
+			image: "Image"
+		}]
+
+
 	
 
-function displayQuestion(questionNumber) {
+function displayQuestion(num) {
 	
-	$("#qRemainingBox").text((totalQuestions) - (questionNumber.num));
-	$("#qSection").text(questionNumber.ask).css('visibility', 'visible').hide().fadeIn(400);
-	$("#option1").text(questionNumber.options[0]).hide().fadeIn(750);
-	$("#option2").text(questionNumber.options[1]).hide().fadeIn(850);
-	$("#option3").text(questionNumber.options[2]).hide().fadeIn(950);
-	$("#option4").text(questionNumber.options[3]).hide().fadeIn(1050);
+	$("#qRemainingBox").text((totalQuestions) - (questions[num].num));
+	$("#qSection").text(questions[num].ask).css('visibility', 'visible').hide().fadeIn(400);
+	$("#option1").text(questions[num].options[0]).hide().fadeIn(750);
+	$("#option2").text(questions[num].options[1]).hide().fadeIn(850);
+	$("#option3").text(questions[num].options[2]).hide().fadeIn(950);
+	$("#option4").text(questions[num].options[3]).hide().fadeIn(1050);
 	$("#next").css('visibility', 'visible').hide().fadeIn(1200);
-	$("#qNumbaBox").html(questionNumber.num);
+	$("#qNumbaBox").html(questions[num].num);
 	console.log("Your function was executed.");
 };
 
 
 
 
+
+
 $("button").click(function(){
-	displayQuestion(question2);
+	displayQuestion(1);
 });
+
+
+
+
+
+
+//log values from buttons
+
+$("#option1").click(function() {
+	var answer = 1;
+	console.log(answer);
+	//if (answer == );
+})
+
+$("#option2").click(function() {
+	var answer = 2;
+	console.log(answer);
+})
+
+$("#option3").click(function() {
+	var answer = 3;
+	console.log(answer);
+})
+
+$("#option4").click(function() {
+	var answer = 4;
+	console.log(answer);
+})
+
+
+
 
