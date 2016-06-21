@@ -1,6 +1,6 @@
 @keyframes animatedBackground {
 	from { background-position: 0 0; }
-	to { background-position: 6000px 0; }
+	to { background-position: 12000px 0; }
 }
 
 body {
@@ -28,11 +28,11 @@ header {
 	background-color: lavender;
 	box-shadow: 0px 0px 30px gray;
 	border-radius: 1rem;
-	background-image: url('http://i.imgur.com/khebpTG.png');
+	background-image: url('http://i.imgur.com/3qyIwWd.png');
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 	background-size: contain;
-	animation: animatedBackground 120s linear infinite;
+	animation: animatedBackground 160s linear infinite;
 	transform: translateZ(0);
 
 }
@@ -40,24 +40,32 @@ header {
 #qNumbaBox {
 	text-align: center;
 	font-family: 'Sacramento';
-	font-size: 2rem;
-	width: 3rem;
+	font-size: 1.5rem;
 	height: 3rem;
-	border-radius: 2rem;
-	background-color: white;
-
+	border-radius: 0.2rem;
+	float: left;
+	margin: 0.3rem;
+	margin-left: 2rem;
+	border-bottom: solid 2px white;
+	text-shadow: 0px 0px 20px white;
+	position: relative;
+	top: 90%;
 
 }
 
 #qRemainingBox {
 	font-family: 'Sacramento';
-	font-size: 2rem;
+	font-size: 1.5rem;
 	text-align: center;
-	width: 3rem;
 	height: 3rem;
-	border-radius: 2rem;
-	background-color: white;
 	float:right;
+	margin: 0.3rem;
+	border-radius: 0.2rem;
+	border-bottom: solid 2px white;
+	margin-right: 2rem;
+	text-shadow: 0px 0px 10px white;
+	position: relative;
+	top: 90%;
 }
 
 
@@ -68,16 +76,67 @@ header {
 	margin: 0 auto;
 	width: 40rem;
 	height: 8.5rem;
+	top: 4rem;
 	text-align: center;
 	font-size: 3rem;
 	font-family: 'Open Sans Condensed', sans-serif;
+	text-shadow: 0px 0px 20px gray;
+	border-radius: 0.5rem;
+	transform: translateY(40%);
+	visibility: hidden;
+	
+}
+
+
+#introDialogue {
+
+	box-shadow: 0px 0px 30px gray;
+	background-color: rgba(255, 255, 255, 0.92);
+	margin: 0 auto;
+	width: 26rem;
+	height: 7rem;
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: 'Open Sans Condensed', sans-serif;
 	text-shadow: 0px 0px 20px grey;
 	border-radius: 0.5rem;
-	visibility:hidden;
-	
-
+	position: relative;
+	visibility: visible;
+	top:15rem;
+	z-index: 400;
 
 }
+
+#testButton {
+	font-size: 1.5rem;
+	font-family: 'Sacramento', sans-serif;
+	background-color: white;
+	border-radius:0.5rem;
+	border: 0.1rem solid black;
+}
+
+#warningDialogue {
+	box-shadow: 0px 0px 30px gray;
+	background-color: rgba(255, 140, 140, 0.92);
+	margin: 0 auto;
+	width: 26rem;
+	height: 7rem;
+	text-align: center;
+	font-size: 1.5rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-shadow: 0px 0px 20px grey;
+	border-radius: 0.5rem;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 110%);
+	visibility: hidden;
+	vertical-align: middle;
+	line-height: 103px;
+	z-index: 400;
+
+}
+
+
 
 #optionsContainer {
 	margin: 0 auto;
@@ -89,8 +148,8 @@ header {
 #next {
 	margin: 0 auto;
 	text-align: center;
-	font-size: 1rem;
-	padding: 1rem;
+	font-size: 1.5rem;
+	padding: 1.5rem;
 	visibility:hidden;
 	width: 10%;
 	border: solid 0.2rem;
@@ -98,13 +157,30 @@ header {
 	position:relative;
 	top:1rem;
 
+
+}
+
+#playAgain	{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 4rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-shadow: 0px 0px 50px white;
+	padding: 3rem;
+	width: 30%;
+	border: solid 0.2rem;
+	border-radius: 5rem;
+	position:relative;
+	top:8rem;
+	visibility: hidden;
+
 }
 
 
 #option1, #option2,
 #option3, #option4 {
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	font-family: 'Sacramento';
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 0.5rem;
@@ -115,7 +191,8 @@ header {
 
 #option1:hover, #option2:hover,
 #option3:hover, #option4:hover,
-#next:hover {
+#next:hover, #playAgain:hover,
+#testButton:hover {
 	text-align: center;
 	background-color: #CECECE;
 	color: white;
