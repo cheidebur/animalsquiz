@@ -25,36 +25,36 @@ var questions = [
 
 		{
 			num: 3,
-			ask: "Is this question number three?",
-			options: ["Why", "yes", "it", "is"],
+			ask: "Which animal is commonly used to produce antivenom?",
+			options: ["Snake", "Sheep", "Tiger", "Zebra"],
 			correct: 2,
 		},
 
 		{
 			num: 4,
-			ask: "Is this question number four?",
-			options: ["Why", "yes", "it", "is"],
-			correct: 2,
+			ask: "Which animal is incapable of vomiting?",
+			options: ["Mouse", "Bird", "Cat", "Lizard"],
+			correct: 1,
 		},
 
 		{
 			num: 5,
-			ask: "Is this question number five?",
-			options: ["Why", "yes", "it", "is"],
-			correct: 2,
+			ask: "Which animal's eye color changes seasonally?",
+			options: ["Grasshopper", "Fox", "Raindeer", "Polar Bear"],
+			correct: 3,
 		},
 
 		{
 			num: 6,
-			ask: "Is this question number six?",
-			options: ["Why", "yes", "it", "is"],
-			correct: 2,
+			ask: "Which animal (other than a human) has been proven to keep a beat?",
+			options: ["Gorilla", "Bonobo", "Lion", "Sea Lion"],
+			correct: 4,
 		},
 
 		{
 			num: 7,
-			ask: "Is this question number seven?",
-			options: ["Why", "yes", "it", "is"],
+			ask: "Which animal can taste with its feet?",
+			options: ["Mouse", "Fly", "Frog", "Alpaca"],
 			correct: 2,
 		}]
 
