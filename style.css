@@ -5,7 +5,7 @@
 
 body {
 	background-color: #4e4936;
-	background-image:url('http://i.imgur.com/3frGrrQ.jpg');
+	/*background-image:url('http://i.imgur.com/3frGrrQ.jpg');*/
 	background-repeat: repeat-x;
 
 }
@@ -28,7 +28,7 @@ header {
 	background-color: lavender;
 	box-shadow: 0px 0px 30px gray;
 	border-radius: 1rem;
-	background-image: url('http://i.imgur.com/3qyIwWd.png');
+	/*background-image: url('http://i.imgur.com/3qyIwWd.png');*/
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 	background-size: contain;
@@ -172,7 +172,7 @@ header {
 	border-radius: 5rem;
 	position:relative;
 	top:8rem;
-	visibility: hidden;
+	display: none;
 
 }
 

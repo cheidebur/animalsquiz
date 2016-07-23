@@ -1,3 +1,44 @@
+
+var Question = function(options, correctAnswer, question) {
+	this.options = options,
+	this.correctAnswer = correctAnswer,
+	this.question = question
+}
+
+var Answer = function(answer) {
+	this.correct = answer
+}
+
+var answer1 = new Answer(3)
+var question1 = new Question(["Shark", "Koala", "Turtle", "Octopus"], answer1.correct, "Which animal can breathe through its butt?")
+
+var answer2 = new Answer(4)
+var question2 = new Question(["Dolphin", "Coyote", "Elephant", "Ostrich"], answer2.correct, "Which animal can travel faster than a horse?")
+
+var answer3 = new Answer(2)
+var question3 = new Question(["Snake", "Sheep", "Tiger", "Zebra"], answer3.correct, "Which animal is commonly used to produce antivenom?")
+
+var answer4 = new Answer(1)
+var question4 = new Question(["Mouse", "Bird", "Cat", "Lizard"], answer4.correct, "Which animal is incapable of vomiting?")
+
+var answer5 = new Answer(3)
+var question5 = new Question(["Grasshopper", "Fox", "Raindeer", "Polar Bear"], answer5.correct, "Which animal's eye color changes seasonally?")
+
+var answer6 = new Answer(4)
+var question6 = new Question(["Gorilla", "Bonobo", "Lion", "Sea Lion"], answer6.correct, "Which animal (other than a human) has been proven to keep a beat?")
+
+var answer7 = new Answer(2)
+var question7 = new Question(["Mouse", "Fly", "Frog", "Alpaca"], answer7.correct, "Which animal can taste with its feet?")
+
+
+
+
+
+
+
+
+var CorrectAnswers = 
+
 var totalQuestions = 7
 
 var num = 0
