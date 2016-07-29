@@ -43,7 +43,77 @@ var questions = [question1, question2, question3, question4, question5, question
 var Quiz = function(questions) {
     this.n = questions.length;
     this.currentIdx = 0;
-    this.displayQuestion = function() {
+   
+};
+
+
+Quiz.prototype.currentquestion = function() {
+    this.questions[this.currentIdx]
+}
+
+Quiz.prototype.nextQuestion = function() {
+    this.currentIdx += 1;
+}
+
+var quiz = new Quiz(questions);
+
+Quiz.prototype.scoreCalc = function() {
+    	if (answer == (questions[this.currentIdx].correctAnswer)) {
+        ++correctScore;
+        console.log("hi");
+        this.nextQuestion();
+        this.displayQuestion();
+    	};
+    };  
+
+
+$("button").click(function() {
+    quiz.displayQuestion();
+    $("#introDialogue").css('display', 'none');
+});
+
+
+
+
+
+Quiz.prototype.resetGame = function() {
+    $("#qRemainingBox").fadeOut();
+    $("#qNumbaBox").fadeOut();
+    this.currentIdx = 0;
+    $(".oButton").hide();
+    $("#qSection").html("Giddy goat! You got " + correctScore + " of " + totalQuestions + " total questions correct!").css('visibility', 'visible').hide().fadeIn(400);
+    $("#playAgain").css('display', 'block').hide().fadeIn(1200);
+    $("#playAgain").click(function() {
+        $("#playAgain").css('display', 'none');
+        this.displayQuestion();
+    });
+}
+
+
+Quiz.prototype.newGame = function() {
+    correctScore = 0;
+    $("#playAgain").click(this.newGame())
+    $("#playAgain").css('visibility', 'hidden');
+    $("#qSection").css('visibility', 'visible').hide();
+    $("#introDialogue").css('display', 'block');
+}
+
+//answerAdd adds the correct answer to the score, but only
+//if the input was validated by answerCheck
+
+Quiz.prototype.answerCheck = function() {
+    $("#warningDialogue").css('visibility', 'hidden') // hide hold ur horses dialogue
+    if (input == true) {
+        $(".oButton").css('background-color', '');
+        console.log("hi");
+        this.scoreCalc();
+    } else { // show warning dialogue if no answer selected
+        $("#warningDialogue").css('visibility', 'visible')
+        $("#warningDialogue").html("Hold your horses! Please select an option.").css('visibility', 'visible').hide().fadeIn(400);
+    };
+}
+
+Quiz.prototype.displayQuestion = function() {
         // reset input validation
         input = false;
         $("#qRemainingBox").fadeIn();
@@ -61,73 +131,12 @@ var Quiz = function(questions) {
             this.resetGame();
         };
     }
-}
-
-
-//resetGame is actually the final screen that displays the score
-Quiz.prototype.resetGame = function() {
-    $("#qRemainingBox").fadeOut();
-    $("#qNumbaBox").fadeOut();
-    this.currentIdx = 0;
-    $(".oButton").hide();
-    $("#qSection").html("Giddy goat! You got " + correctScore + " of " + totalQuestions + " total questions correct!").css('visibility', 'visible').hide().fadeIn(400);
-    $("#playAgain").css('display', 'block').hide().fadeIn(1200);
-    $("#playAgain").click(function() {
-        $("#playAgain").css('display', 'none');
-        quiz.displayQuestion();
-    });
-}
-
-
-Quiz.prototype.currentquestion = function() {
-    this.questions[this.currentIdx]
-}
-
-Quiz.prototype.nextQuestion = function() {
-    this.currentIdx += 1;
-}
-
-Quiz.prototype.newGame = function() {
-    correctScore = 0;
-    $("#playAgain").click(this.newGame())
-    $("#playAgain").css('visibility', 'hidden');
-    $("#qSection").css('visibility', 'visible').hide();
-    $("#introDialogue").css('display', 'block');
-}
-
-//answerAdd adds the correct answer to the score, but only
-//if the input was validated by answerCheck
-Quiz.prototype.answerAdd = function() {
-    if (answer == (questions[this.currentIdx].correctAnswer)) {
-        ++correctScore;
-    }
-    this.nextQuestion();
-    this.displayQuestion();
-};
-
-Quiz.prototype.answerCheck = function() {
-    $("#warningDialogue").css('visibility', 'hidden') // hide hold ur horses dialogue
-    if (input == true) {
-        $(".oButton").css('background-color', '');
-        this.answerAdd();
-    } else { // show warning dialogue if no answer selected
-        $("#warningDialogue").css('visibility', 'visible')
-        $("#warningDialogue").html("Hold your horses! Please select an option.").css('visibility', 'visible').hide().fadeIn(400);
-    };
-}
-
-var quiz = new Quiz(questions);
-
-$("button").click(function() {
-    quiz.displayQuestion();
-    $("#introDialogue").css('display', 'none');
-});
 
 
 //Since I didn't use radio buttons, this code assigns a value to each of
 //the buttons
 
-$("#option1").click(function() {
+$("#option1").click(function(){
     answer = 1;
     //this resets the background color of all buttons in case
     //a user changes their choice and chooses a different button
